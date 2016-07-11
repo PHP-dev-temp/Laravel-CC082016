@@ -3,7 +3,7 @@
 @section ('content')
     <h1 class="page-header">Create user</h1>
 
-    {!! Form::open(array('method' => 'POST', 'action' => 'AdminUsersController@store')) !!}
+    {!! Form::open(array('method' => 'POST', 'action' => 'AdminUsersController@store', 'files' => true )) !!}
 
     <div class="form-group">
         {!! Form::label('name', 'Name: ') !!}
@@ -19,11 +19,15 @@
     </div>
     <div class="form-group">
         {!! Form::label('role_id', 'Role: ') !!}
-        {!! Form::select('role_id', array(''=>'Choose options') + $roles, null, ['class' => 'form-control']) !!}
+        {!! Form::select('role_id', $roles, 3, ['class' => 'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('password', 'Password: ') !!}
         {!! Form::password('password', ['class' => 'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('photo_id', 'Photo: ') !!}
+        {!! Form::file('photo_id', null, ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">
