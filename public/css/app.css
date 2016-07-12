@@ -1,4 +1,8 @@
 #admin-page {
-  padding-top: 0px; }
+  padding-top: 0; }
+
+.user_action {
+  padding: 15px;
+  margin-top: 10px; }
 
 /*# sourceMappingURL=app.css.map */
